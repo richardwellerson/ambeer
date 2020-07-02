@@ -1,6 +1,6 @@
 import React from 'react';
-import ambeer from './ambeer.png';
-import './App.css';
+import ambeer from './img/ambeer.png';
+import './styles/App.css';
 
 function App() {
   return (
