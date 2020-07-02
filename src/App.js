@@ -1,9 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ambeerLogo from './img/ambeer.png';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import Reservation from './pages/Reservation';
+import Menu from './pages/Menu';
+import Confirm from './pages/Confirm';
+import Cart from './pages/Cart';
 import './styles/App.css';
 
-function App() {
+const App = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
