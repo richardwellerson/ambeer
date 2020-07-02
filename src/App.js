@@ -1,25 +1,21 @@
 import React from 'react';
-import ambeer from './img/ambeer.png';
+import { Route, Switch } from 'react-router-dom';
+import ambeerLogo from './img/ambeer.png';
 import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={ambeer} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to ambeer.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Breja
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+      <Route path="/profile" component={Profile} />
+      <Route exact path="/reservation" component={Reservation} />
+      <Route exact path="/reservation/menu" component={Menu} />
+      <Route path="/menu" component={Menu} />
+      <Route exact path="/reservation/confirm" component={Confirm} />
+      <Route exact path="/reservation/cart" component={Cart} />
+    </Switch>
   );
 }
 
