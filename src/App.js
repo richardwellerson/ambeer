@@ -1,25 +1,28 @@
 import React from 'react';
-import ambeer from './img/ambeer.png';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import Reservation from './pages/Reservation';
+import Menu from './pages/Menu';
+import Confirm from './pages/Confirm';
+import Cart from './pages/Cart';
 import './styles/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={ambeer} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to ambeer.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Breja
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+      <Route path="/profile" component={Profile} />
+      <Route exact path="/reservation" component={Reservation} />
+      <Route exact path="/reservation/menu" component={Menu} />
+      <Route path="/menu" component={Menu} />
+      <Route exact path="/reservation/confirm" component={Confirm} />
+      <Route exact path="/reservation/cart" component={Cart} />
+    </Switch>
   );
 }
 

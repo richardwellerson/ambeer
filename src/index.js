@@ -1,11 +1,15 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
+import AmbeerContext from './context/AmbeerContext';
 import App from './App';
+import './styles/index.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <AmbeerContext>
+      <App />
+    </AmbeerContext>
+  </BrowserRouter>,
   document.getElementById('root')
 );
