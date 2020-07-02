@@ -1,27 +1,27 @@
 export const user = [
   {
     name: 'Nayara Nascimento',
-    email: '@gmail.com',
+    email: 'nayara@gmail.com',
     password: 'password',
-    image: 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png',
+    image: 'https://cdn.onlinewebfonts.com/svg/img_38179.png',
   },
   {
     name: 'Diego Faria',
-    email: '@gmail.com',
+    email: 'diego@gmail.com',
     password: 'password',
-    image: 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png',
+    image: 'https://icon-library.com/images/icon-man-png/icon-man-png-2.jpg',
   },
   {
     name: 'Richard Martins',
-    email: '@gmail.com',
+    email: 'richard@gmail.com',
     password: 'password',
-    image: 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png',
+    image: 'https://icon-library.com/images/icon-man-png/icon-man-png-2.jpg',
   },
   {
     name: 'Henrique Baêta',
-    email: '@gmail.com',
+    email: 'henrique@gmail.com',
     password: 'password',
-    image: 'https://w7.pngwing.com/pngs/34/886/png-transparent-female-woman-girl-computer-icons-svg-face-people-logo.png',
+    image: 'https://icon-library.com/images/icon-man-png/icon-man-png-2.jpg',
   }
 ];
 
@@ -170,5 +170,73 @@ export const allBeers = [
     beer: 'Wäls',
     price: 15.5,
     image: 'https://www.ambev.com.br/conteudo/uploads/2019/03/logo_wals.jpg',
+  },
+];
+
+export const foods = [
+  {
+    food: "Corba",
+    foodImage: "https://www.themealdb.com/images/media/meals/58oia61564916529.jpg",
+    price: 40,
+  },
+  {
+    food: "Kumpir",
+    foodImage: "https://www.themealdb.com/images/media/meals/mlchx21564916997.jpg",
+    price: 40,
+  },
+  {
+    food: "Dal fry",
+    foodImage: "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
+    price: 40,
+  },
+  {
+    food: "Poutine",
+    foodImage: "https://www.themealdb.com/images/media/meals/uuyrrx1487327597.jpg",
+    price: 40,
+  },
+  {
+    food: "Lasagne",
+    foodImage: "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg",
+    price: 40,
+  },
+  {
+    food: "Timbits",
+    foodImage: "https://www.themealdb.com/images/media/meals/txsupu1511815755.jpg",
+    price: 40,
+  },
+  {
+    food: "Wontons",
+    foodImage: "https://www.themealdb.com/images/media/meals/1525876468.jpg",
+    price: 40,
+  },
+  {
+    food: "Kafteji",
+    foodImage: "https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg",
+    price: 40,
+  },
+  {
+    food: "Big Mac",
+    foodImage: "https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg",
+    price: 40,
+  },
+  {
+    food: "Kapsalon",
+    foodImage: "https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg",
+    price: 40,
+  },
+  {
+    food: "Fish pie",
+    foodImage: "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg",
+    price: 40,
+  },
+  {
+    food: "Pancakes",
+    foodImage: "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+    price: 40,
+  },
+  {
+    food: "Kedgeree",
+    foodImage: "https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg",
+    price: 40,
   },
 ];
