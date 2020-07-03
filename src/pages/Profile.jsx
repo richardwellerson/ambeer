@@ -3,6 +3,7 @@ import Ambeer from '../context';
 import UserData from '../components/Profile/UserData';
 import ReservationButton from '../components/Profile/ReservationButton';
 import GoogleAPIComponent from '../components/Profile/GoogleAPIComponent';
+import Footer from '../components/Footer';
 
 const Profile = () => {
   const { login } = useContext(Ambeer);
@@ -14,6 +15,7 @@ const Profile = () => {
       <UserData />
       <ReservationButton />
       <GoogleAPIComponent />
+      <Footer />
     </div>
   );
 };
