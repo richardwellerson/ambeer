@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import Ambeer from '../context';
+import UserData from '../components/Profile/UserData';
+import ReservationButton from '../components/Profile/ReservationButton';
 
 const Profile = () => {
   const { login } = useContext(Ambeer);
@@ -8,6 +10,8 @@ const Profile = () => {
     <div>
       <p>{login}</p>
       <p>{actualRoute}</p>
+      <UserData />
+      <ReservationButton />
     </div>
   );
 };
