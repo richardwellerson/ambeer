@@ -1,15 +1,33 @@
-import React, { useContext } from 'react';
-import Ambeer from '../context';
+import React, { useContext } from "react";
+import Ambeer from "../context";
+import { Box, Button } from "@material-ui/core";
+import "../styles/index.css";
+import logo from "../img/logo.png";
 
-const Cart = () => {
-  const { login } = useContext(Ambeer);
-  const actualRoute = window.location.href;
+const Home = () => {
+  // const { login } = useContext(Ambeer);
+  // const actualRoute = window.location.href;
   return (
-    <div>
-      <p>{login}</p>
-      <p>{actualRoute}</p>
-    </div>
+    <>
+      <Box className="home">
+        <Box className="logo">
+          <img src={logo}></img>
+        </Box>
+        <Box className="botoes-home">
+          <Box>
+            <Button variant="outlined" size="large">
+              Entrar
+            </Button>
+          </Box>
+          <Box>
+            <Button variant="outlined" size="large">
+              Registrar
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 };
 
-export default Cart;
+export default Home;
