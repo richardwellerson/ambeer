@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Ambeer from '../context';
 import UserData from '../components/Profile/UserData';
 import ReservationButton from '../components/Profile/ReservationButton';
+import GoogleAPIComponent from '../components/Profile/GoogleAPIComponent';
 
 const Profile = () => {
   const { login } = useContext(Ambeer);
@@ -12,6 +13,7 @@ const Profile = () => {
       <p>{actualRoute}</p>
       <UserData />
       <ReservationButton />
+      <GoogleAPIComponent />
     </div>
   );
 };

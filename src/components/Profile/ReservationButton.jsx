@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core';
 const ReservationButton = () => {
   return (
     <Link to="/reservation">
-      <Button>Reserva</Button>
+      <Button size='large' color='secondary'>Reserva</Button>
     </Link>
   );
 };
