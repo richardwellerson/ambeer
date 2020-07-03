@@ -14,13 +14,13 @@ const cleanAndExit = () => {
 const Footer = () => (
   <Box className="Footer_all">
     <Link to="/profile">
-      <Avatar alt="go to profile page" src={profileIcon} />
+      <Avatar alt="link para Perfil" src={profileIcon} />
     </Link>
     <Link to="/menu">
-      <Avatar alt="go to menu page" src={menuIcon} />
+      <Avatar alt="link para Cardápio" src={menuIcon} />
     </Link>
     <Box onClick={() => cleanAndExit()}>
-      <Avatar alt="logoff application" src={exitIcon} />
+      <Avatar alt="sair da aplicação" src={exitIcon} />
     </Box>
   </Box>
 );
