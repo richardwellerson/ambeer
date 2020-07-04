@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
-import Ambeer from '../context';
+import React from 'react';
+import { Box } from '@material-ui/core';
+import FilterProducts from '../components/Menu/FilterProducts';
+import ShowProducts from '../components/Menu/ShowProducts';
+import InputSearch from '../components/Menu/InputSearch';
+import MenuTitle from '../components/Menu/MenuTitle';
+import Footer from '../components/Footer/Footer';
+import FinishPreOrder from '../components/Menu/FinishPreOrder';
 
-const Menu = () => {
-  const { login } = useContext(Ambeer);
-  const actualRoute = window.location.href;
-  return (
-    <div>
-      <p>{login}</p>
-      <p>{actualRoute}</p>
-    </div>
-  );
-};
+const Menu = () => (
+  <Box>
+    <MenuTitle />
+    <InputSearch />
+    <FilterProducts />
+    <FinishPreOrder />
+    <ShowProducts />
+    <Footer />
+  </Box>
+);
 
 export default Menu;
