@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import Ambeer from './index';
 
 const user = { email: '', password: '' };
+const date = { name: '', nickName: '', email: '', password: '' };
 
 const AmbeerContext = ({ children }) => {
   const [login, setLogin] = useState('Context Ativo');
   const [informationsUser, setInformationsUser] = useState(user);
+  const [userDate, setUserDate] = useState(date);
 
   const saveInput = (input) => {
     const inputsLogin = {
@@ -13,6 +15,18 @@ const AmbeerContext = ({ children }) => {
       password: input.password,
     };
     setInformationsUser(inputsLogin);
+    setUserDate(inputsLogin);
+  };
+
+  const saveRegisterUser = (dados) => {
+    const inputsRegister = {
+      name: dados.name,
+      nickName: dados.nickName,
+      email: dados.email,
+      password: dados.password,
+    };
+    console.log(userDate);
+    setUserDate(inputsRegister);
   };
 
   const toProvider = {
@@ -20,6 +34,8 @@ const AmbeerContext = ({ children }) => {
     setLogin,
     saveInput,
     informationsUser,
+    saveRegisterUser,
+    userDate,
   };
 
   return (
