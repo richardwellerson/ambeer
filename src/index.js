@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import AmbeerContext from './context/AmbeerContext';
-import App from './App';
-import './styles/index.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom";
+import AmbeerContext from "./context/AmbeerContext";
+import App from "./App";
+import "./styles/index.css";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -11,5 +11,5 @@ ReactDOM.render(
       <App />
     </AmbeerContext>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
