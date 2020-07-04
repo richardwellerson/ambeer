@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Box className="home">
         <Box className="logo">
-          <img src={logo}></img>
+          <img src={logo} alt="logo-ambeer" />
         </Box>
         <Box className="botoes-home">
           <Box>

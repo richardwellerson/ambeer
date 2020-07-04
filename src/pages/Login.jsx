@@ -14,11 +14,11 @@ const Login = () => {
         </Box>
         <Box className="inputs-login">
           <Box className="input">
-            <label htlmFor="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="email" />
           </Box>
           <Box className="input">
-            <label htlmFor="password">Senha</label>
+            <label htmlFor="password">Senha</label>
             <input type="password" />
           </Box>
           <Box className="botao-login">
