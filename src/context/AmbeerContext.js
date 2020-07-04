@@ -15,11 +15,17 @@ const setDataToSearch = (filter) => {
   return [...foods];
 };
 
+const user = { email: '', password: '' };
+const date = { name: '', nickName: '', email: '', password: '' };
+
 const AmbeerContext = ({ children }) => {
   const [login, setLogin] = useState('Context Ativo');
   const [filter, setFilter] = useState('Todos');
+  const [informationsUser, setInformationsUser] = useState(user);
+  const [userDate, setUserDate] = useState(date);
   const [userSearch, setUserSearch] = useState('');
   const [searchedProducts, setSearchedProducts] = useState(allProducts);
+  const [preOrder, setPreOrder] = useState([]);
 
   useEffect(() => {
     const afterFilter = setDataToSearch(filter);
@@ -29,6 +35,26 @@ const AmbeerContext = ({ children }) => {
     setSearchedProducts(afterInput);
   }, [filter, userSearch])
 
+  const saveInput = (input) => {
+    const inputsLogin = {
+      email: input.email,
+      password: input.password,
+    };
+    setInformationsUser(inputsLogin);
+    setUserDate(inputsLogin);
+  };
+
+  const saveRegisterUser = (dados) => {
+    const inputsRegister = {
+      name: dados.name,
+      nickName: dados.nickName,
+      email: dados.email,
+      password: dados.password,
+    };
+    console.log(userDate);
+    setUserDate(inputsRegister);
+  };
+
   const toProvider = {
     login,
     setLogin,
@@ -37,6 +63,12 @@ const AmbeerContext = ({ children }) => {
     userSearch,
     setUserSearch,
     searchedProducts,
+    saveInput,
+    informationsUser,
+    saveRegisterUser,
+    userDate,
+    preOrder,
+    setPreOrder,
   };
 
   return (
