@@ -6,16 +6,14 @@ import InputSearch from '../components/Menu/InputSearch';
 import MenuTitle from '../components/Menu/MenuTitle';
 import Footer from '../components/Footer/Footer';
 
-const Menu = () => {
-  return (
-    <Box>
-      <MenuTitle />
-      <InputSearch />
-      <FilterProducts />
-      <ShowProducts />
-      <Footer />
-    </Box>
-  );
-};
+const Menu = () => (
+  <Box>
+    <MenuTitle />
+    <InputSearch />
+    <FilterProducts />
+    <ShowProducts />
+    <Footer />
+  </Box>
+);
 
 export default Menu;
