@@ -11,17 +11,17 @@ import Cart from './pages/Cart';
 import './styles/App.css';
 
 const App = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/login" component={Login} />
-    <Route exact path="/register" component={Register} />
-    <Route path="/profile" component={Profile} />
-    <Route exact path="/reservation" component={Reservation} />
-    <Route exact path="/reservation/menu" component={Menu} />
-    <Route path="/menu" component={Menu} />
-    <Route exact path="/reservation/confirm" component={Confirm} />
-    <Route exact path="/reservation/cart" component={Cart} />
-  </Switch>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+      <Route exact path="/profile" component={Profile} />
+      <Route exact path="/reservation" component={Reservation} />
+      <Route exact path="/reservation/menu" component={Menu} />
+      <Route exact path="/menu" component={Menu} />
+      <Route exact path="/reservation/confirm" component={Confirm} />
+      <Route exact path="/reservation/cart" component={Cart} />
+    </Switch>
 );
 
 export default App;

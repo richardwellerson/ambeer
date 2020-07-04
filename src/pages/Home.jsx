@@ -1,28 +1,38 @@
-import React, { useContext } from "react";
-import Ambeer from "../context";
-import { Box, Button } from "@material-ui/core";
-import "../styles/index.css";
-import logo from "../img/logo.png";
+import React from 'react';
+import { Box, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import '../styles/index.css';
+import logo from '../img/logo.png';
 
 const Home = () => {
-  // const { login } = useContext(Ambeer);
-  // const actualRoute = window.location.href;
   return (
     <>
       <Box className="home">
         <Box className="logo">
-          <img src={logo} alt="logo-ambeer" />
+          <img src={logo} alt="logo" data-testid="logo-amber"></img>
         </Box>
         <Box className="botoes-home">
           <Box>
-            <Button variant="outlined" size="large">
-              Entrar
-            </Button>
+            <Link to="/login">
+              <Button
+                data-testid="entrar-btn"
+                variant="outlined"
+                size="large"
+              >
+                Entrar
+              </Button>
+            </Link>
           </Box>
           <Box>
-            <Button variant="outlined" size="large">
-              Registrar
-            </Button>
+            <Link to="/register">
+              <Button
+                data-testid="registrar-btn"
+                variant="outlined"
+                size="large"
+              >
+                Registrar
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Box>
