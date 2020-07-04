@@ -1,8 +1,7 @@
-import React from 'react';
-import { Box, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import '../styles/index.css';
-import logo from '../img/logo.png';
+import React from "react";
+import { Box, Typography } from "@material-ui/core";
+import "../styles/index.css";
+import logo from "../img/logo.png";
 
 const Home = () => {
   return (
@@ -11,28 +10,14 @@ const Home = () => {
         <Box className="logo">
           <img src={logo} alt="logo" data-testid="logo-amber"></img>
         </Box>
-        <Box className="botoes-home">
+        <Box className="frase-home">
           <Box>
-            <Link to="/login">
-              <Button
-                data-testid="entrar-btn"
-                variant="outlined"
-                size="large"
-              >
-                Entrar
-              </Button>
-            </Link>
+            <Typography variant="h6">
+              Um novo jeito de curtir a vida!
+            </Typography>
           </Box>
           <Box>
-            <Link to="/register">
-              <Button
-                data-testid="registrar-btn"
-                variant="outlined"
-                size="large"
-              >
-                Registrar
-              </Button>
-            </Link>
+            <Typography variant="h6">Faça parte dessa família.</Typography>
           </Box>
         </Box>
       </Box>
