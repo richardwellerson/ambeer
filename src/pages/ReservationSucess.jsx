@@ -6,7 +6,7 @@ const ReservationSucess = () => {
   return (
     <Box>
       <Typography variant="h3">Reserva realizada com sucesso!</Typography>
-      <Typography variant="h4">ESPERAMOS POR VOCÊd</Typography>
+      <Typography variant="h4">ESPERAMOS POR VOCÊ.</Typography>
       <Footer />
     </Box>
   );
