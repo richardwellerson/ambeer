@@ -1,12 +1,13 @@
 import React from 'react';
+import { Box, Typography } from '@material-ui/core';
 
 const UserData = () => {
   return (
-    <div>
-      <img src="" alt="photo profile" />
-      <h3>UserName</h3>
-      <h5>email</h5>
-    </div>
+    <Box>
+      <img src="" alt="foto de perfil" />
+      <Typography variant="h3">UserName</Typography>
+      <Typography variant="h5">email</Typography>
+    </Box>
   );
 };
 

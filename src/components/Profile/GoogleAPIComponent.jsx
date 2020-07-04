@@ -1,10 +1,11 @@
 import React from 'react';
+import { Box } from '@material-ui/core';
 
 const GoogleAPIComponent = () => {
   return (
-    <div>
+    <Box>
       <p>Google API here</p>
-    </div>
+    </Box>
   );
 };
 
