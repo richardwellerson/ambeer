@@ -1,7 +1,7 @@
 import React from 'react';
 import { cleanup, fireEvent, act } from '@testing-library/react';
 import renderWithRouter from './mocks/RenderService';
-import "jest-mock";
+import 'jest-mock';
 import Login from '../pages/Login';
 import Ambeer from '../context';
 

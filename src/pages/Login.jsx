@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Typography, Box, InputBase, Button } from "@material-ui/core";
+import React, { useContext, useEffect, useState } from 'react';
+import { Typography, Box, Button } from '@material-ui/core';
 import { Redirect } from 'react-router-dom';
-import Ambeer from "../context";
-import "../styles/index.css";
+import Ambeer from '../context';
+import '../styles/index.css';
 
 const handleChangeInput = (name, event, input, setInput) => {
   setInput({ ...input, [name]: event });

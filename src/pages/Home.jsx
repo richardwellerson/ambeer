@@ -1,8 +1,8 @@
-import React from "react";
-import { Box, Button } from "@material-ui/core";
+import React from 'react';
+import { Box, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import "../styles/index.css";
-import logo from "../img/logo.png";
+import '../styles/index.css';
+import logo from '../img/logo.png';
 
 const Home = () => {
   return (

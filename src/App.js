@@ -10,8 +10,7 @@ import Confirm from './pages/Confirm';
 import Cart from './pages/Cart';
 import './styles/App.css';
 
-const App = () => {
-  return (
+const App = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
@@ -23,7 +22,6 @@ const App = () => {
       <Route exact path="/reservation/confirm" component={Confirm} />
       <Route exact path="/reservation/cart" component={Cart} />
     </Switch>
-  );
-}
+);
 
 export default App;
