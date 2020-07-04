@@ -1,19 +1,42 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #7c1010;
 }
 
-code {
-  font-family: "Josefin Sans", sans-serif !important;
+/*Carousel*/
+.react-multi-carousel-list .react-multiple-carousel__arrow {
+  position: absolute;
+  outline: 0;
+  transition: all 0.5s;
+  border-radius: 35px;
+  z-index: 1000;
+  border: 0;
+  background: rgb(124, 16, 16);
+  min-width: 40px;
+  min-height: 40px;
+  opacity: 1;
+  cursor: pointer;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
+.react-multi-carousel-list .react-multiple-carousel__arrow--left {
+  left: 0;
+}
+
+.react-multi-carousel-list .react-multiple-carousel__arrow--right {
+  right: 0;
+}
+/*Final Carousel*/
 
 /*Home*/
 .home {
-  font-family: "Josefin Sans", sans-serif !important;
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -21,27 +44,67 @@ code {
   flex-direction: column;
   margin: 0 auto;
   min-height: 600px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .home .logo {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 60px;
 }
 
 .home .logo img {
   width: 330px;
 }
 
-.botoes-home {
+.frase-home {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 600px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frase-home h6 {
+  font-family: "Comfortaa", cursive;
+  color: #ffffff;
+  font-weight: lighter;
+}
+/*Final Home*/
+
+/*Home2*/
+.home2 {
+  font-family: "Comfortaa", cursive;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 600px;
+  justify-content: space-evenly;
+}
+
+.home2 .logo {
+  margin: 100px 0;
+}
+
+.home2 .logo img {
+  width: 330px;
+}
+
+.botoes-home2 {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   max-width: 600px;
 }
 
-.botoes-home button {
-  font-family: "Josefin Sans", sans-serif !important;
+.botoes-home2 a {
+  text-decoration: none;
+}
+
+.botoes-home2 button {
+  font-family: "Comfortaa", cursive;
   text-transform: none !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -51,11 +114,11 @@ code {
   border: 2px solid #ffffff;
 }
 
-.botoes-home button:hover {
+.botoes-home2 button:hover {
   border-color: #ffdf02;
   background-color: #ffdf02;
 }
-/*Final home*/
+/*Final Home2*/
 
 /*Login*/
 .login {
@@ -69,7 +132,7 @@ code {
 
 .login .titulo h4 {
   color: #ffffff;
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: "Comfortaa", cursive;
 }
 
 .inputs-login {
@@ -102,7 +165,7 @@ code {
 }
 
 .botao-login button {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: "Comfortaa", cursive;
   text-transform: none !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -117,6 +180,4 @@ code {
   border-color: #ffdf02;
   background-color: #ffdf02;
 }
-
-.login .titulo {
-}
+/*Final Login*/
