@@ -1,19 +1,19 @@
-import React from 'react';
-import { Box, Typography } from '@material-ui/core';
-import user from '../../img/neutralUser.svg'
+import React from "react";
+import { Box, Typography } from "@material-ui/core";
+import user from "../../img/person.svg";
 
 const UserData = () => {
-  const { name, email } = JSON.parse(localStorage.getItem('user'));
+  const { name, email } = JSON.parse(localStorage.getItem("user"));
   return (
-    <Box>
-      <img
-        width="50px"
-        src={user}
-        alt="foto de perfil"
-      />
-      <Typography variant="h3">{name}</Typography>
-      <Typography variant="h5">{email}</Typography>
-    </Box>
+    <>
+      <Box className="perfil-user">
+        <Box className="img-user">
+          <img width="50px" src={user} alt="foto de perfil" />
+        </Box>
+        <Typography variant="h4">{name}</Typography>
+        <Typography variant="subtitle2">{email}</Typography>
+      </Box>
+    </>
   );
 };
 

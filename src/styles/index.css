@@ -615,3 +615,92 @@ body {
   opacity: 0.1;
   width: 200px;
 }
+
+/*Final Reserva*/
+
+/*Perfil*/
+.perfil-user {
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: 160px;
+  margin-bottom: 60px;
+}
+
+.perfil {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto auto auto;
+  min-height: 600px;
+  justify-content: center;
+}
+
+.perfil .container-bares img {
+  width: 330px;
+  border-radius: 4%;
+  min-height: 220px;
+}
+
+.perfil .container-bares img:hover {
+  border: 2px solid #ffdd02c5;
+}
+
+.perfil-user h4 {
+  font-family: "Comfortaa", cursive;
+  color: #ffffff;
+}
+
+.perfil-user h6 {
+  font-family: "Comfortaa", cursive;
+  color: #ffffff;
+}
+
+.perfil button {
+  font-family: "Comfortaa", cursive;
+  text-transform: none !important;
+  color: #ffffff;
+  border-color: #ffffff;
+  transition-duration: 0.4s;
+  width: 140px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  width: 190px;
+  margin-bottom: 120px;
+}
+
+.perfil button:hover {
+  border-color: #ffdf02;
+  background-color: #ffdf02;
+}
+
+.perfil a {
+  text-decoration: none;
+}
+
+.perfil .container-bares {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-bares h6 {
+  font-family: "Comfortaa", cursive;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.perfil .container-bares div {
+  margin: 20px;
+}
+
+.img-user img {
+  width: 120px;
+}
