@@ -10,7 +10,7 @@ const ConfirmTitle = () => {
         E lembre-se que se 6 amigos ou mais também confirmarem presença, todos
         recebem 10% de desconto na comanda na hora do pagamento! :)
       </Typography>
-      <Typography variant="subtitle2">Esperamos por você.</Typography>
+      <Typography variant="h6">Esperamos por você.</Typography>
     </Box>
   );
 };
