@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/index.css";
 import logo from "../img/logo.png";
 
-const Home = () => {
+const Home2 = () => {
   return (
     <>
       <Box className="home2">
@@ -36,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home2;
