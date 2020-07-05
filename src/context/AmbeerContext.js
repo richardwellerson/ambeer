@@ -26,6 +26,7 @@ const AmbeerContext = ({ children }) => {
   const [userSearch, setUserSearch] = useState('');
   const [searchedProducts, setSearchedProducts] = useState(allProducts);
   const [preOrder, setPreOrder] = useState([]);
+  const [selectDate, setSelectDate] = useState('');
 
   useEffect(() => {
     const afterFilter = setDataToSearch(filter);
@@ -70,6 +71,8 @@ const AmbeerContext = ({ children }) => {
     userDate,
     preOrder,
     setPreOrder,
+    setSelectDate,
+    selectDate,
   };
 
   return (
