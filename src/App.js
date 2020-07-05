@@ -8,7 +8,6 @@ import Profile from "./pages/Profile";
 import Reservation from "./pages/Reservation";
 import Menu from "./pages/Menu";
 import Confirm from "./pages/Confirm";
-import Cart from "./pages/Cart";
 import "./styles/App.css";
 
 const App = () => (
@@ -22,7 +21,6 @@ const App = () => (
     <Route exact path="/reservation/menu" component={Menu} />
     <Route exact path="/menu" component={Menu} />
     <Route exact path="/reservation/confirm" component={Confirm} />
-    <Route exact path="/reservation/cart" component={Cart} />
   </Switch>
 );
 

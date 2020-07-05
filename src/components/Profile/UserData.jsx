@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Box, Typography } from '@material-ui/core';
-import Ambeer from '../../context';
+import user from '../../img/neutralUser.svg'
 
 const UserData = () => {
-  const {
-    userData: { name, email },
-  } = useContext(Ambeer);
+  const { name, email } = JSON.parse(localStorage.getItem('user'));
   return (
     <Box>
-      <img src="" alt="foto de perfil" />
+      <img
+        width="50px"
+        src={user}
+        alt="foto de perfil"
+      />
       <Typography variant="h3">{name}</Typography>
       <Typography variant="h5">{email}</Typography>
     </Box>
