@@ -3,8 +3,7 @@ import { Box, Typography } from '@material-ui/core';
 import user from '../../img/neutralUser.svg'
 
 const UserData = () => {
-  const { name, email } = JSON.parse(localStorage.getItem('userData'));
-  console.log(name, email);
+  const { name, email } = JSON.parse(localStorage.getItem('user'));
   return (
     <Box>
       <img

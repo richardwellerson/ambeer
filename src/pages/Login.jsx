@@ -8,26 +8,26 @@ const handleChangeInput = (name, event, input, setInput) => {
   setInput({ ...input, [name]: event });
 };
 
-const handleFormSubmit = (saveInput, input, history) => {
-  localStorage.setItem('user', JSON.stringify({
-    email: input.email,
-    password: input.password
-  }));
-  const { email, password } = JSON.parse(localStorage.getItem('userData'));
-  if (input.email !== email || input.password !== password) {
-    alert('Senha ou email incorretos.');
+const handleFormSubmit = (saveInput, input, history, register) => {
+  const { email, password } = register
+  if (input.email !== email) {
+    alert('Cadastro não localizado.');
     return;
   }
+  if (input.password !== password) {
+    alert('Senha incorreta.')
+    return;
+  }
+  localStorage.setItem('user', JSON.stringify(register));
   saveInput(input);
   return history.push('/profile');
 };
 
 const Login = () => {
-  const { saveInput } = useContext(Ambeer);
+  const { saveInput, register } = useContext(Ambeer);
   const [input, setInput] = useState({ email: '', password: '' });
   const [informations, setInformations] = useState(true);
   const history = useHistory();
-  localStorage.setItem('userData', JSON.stringify({}));
 
   useEffect(() => {
     const validEmailRegEx = /^[A-Z0-9_'%=+!`#~$*?^{}&|-]+([.][A-Z0-9_'%=+!`#~$*?^{}&|-]+)*@[A-Z0-9-]+(\.[A-Z0-9-]+)+$/i;
@@ -37,6 +37,11 @@ const Login = () => {
 
     return setInformations(false);
   }, [input]);
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if(user) return history.push('/profile');
+  })
 
   return (
     <>
@@ -67,7 +72,7 @@ const Login = () => {
               data-testid="login-submit-btn"
               variant="outlined"
               size="large"
-              onClick={() => handleFormSubmit(saveInput, input, history)}
+              onClick={() => handleFormSubmit(saveInput, input, history, register)}
             >
               Entrar
             </Button>
