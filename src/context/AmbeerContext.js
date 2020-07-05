@@ -28,8 +28,6 @@ const AmbeerContext = ({ children }) => {
   const [preOrder, setPreOrder] = useState([]);
   const [selectDate, setSelectDate] = useState('');
 
-  console.log(selectDate);
-
   useEffect(() => {
     const afterFilter = setDataToSearch(filter);
     const afterInput = userSearch !== ''
@@ -54,7 +52,6 @@ const AmbeerContext = ({ children }) => {
       email: dados.email,
       password: dados.password,
     };
-    console.log(userDate);
     setUserDate(inputsRegister);
   };
 
@@ -73,6 +70,7 @@ const AmbeerContext = ({ children }) => {
     preOrder,
     setPreOrder,
     setSelectDate,
+    selectDate,
   };
 
   return (
