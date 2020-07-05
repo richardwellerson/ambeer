@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Typography, Box, Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import Ambeer from "../context";
+import React, { useContext, useState, useEffect } from 'react';
+import { Typography, Box, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import Ambeer from '../context';
 
 const handleChangeInput = (name, event, input, setInput) => {
   setInput({ ...input, [name]: event });
@@ -84,20 +84,20 @@ const createForm = (input, setInput, eye, setEye) => {
 const formSubmit = (saveRegisterUser, input) => {
   const { password, passwordConfirm } = input;
   if (password === passwordConfirm) {
-    alert("Usuário cadastrado com sucesso! Faça login para continuar.");
+    alert('Usuário cadastrado com sucesso! Faça login para continuar.');
     return saveRegisterUser(input);
   }
-  return alert("Senhas diferentes!");
+  return alert('Senhas diferentes!');
 };
 
 const Register = () => {
   const { saveRegisterUser } = useContext(Ambeer);
   const [input, setInput] = useState({
-    name: "",
-    nickName: "",
-    email: "",
-    password: "",
-    passwordConfirm: "",
+    name: '',
+    nickName: '',
+    email: '',
+    password: '',
+    passwordConfirm: '',
   });
   const [registerOk, setRegisterOk] = useState(true);
   const [eye, setEye] = useState(true);

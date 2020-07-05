@@ -1,7 +1,7 @@
-import React from "react";
-import { Box, Typography } from "@material-ui/core";
-import "../styles/index.css";
-import logo from "../img/logo.png";
+import React from 'react';
+import { Box, Typography } from '@material-ui/core';
+import '../styles/index.css';
+import logo from '../img/logo.png';
 
 const Home = () => {
   return (

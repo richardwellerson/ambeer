@@ -1,15 +1,15 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import HomeAll from "./pages/HomeAll";
-import Home2 from "./pages/Home2";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Profile from "./pages/Profile";
-import Reservation from "./pages/Reservation";
-import Menu from "./pages/Menu";
-import Confirm from "./pages/Confirm";
-import Cart from "./pages/Cart";
-import "./styles/App.css";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import HomeAll from './pages/HomeAll';
+import Home2 from './pages/Home2';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import Reservation from './pages/Reservation';
+import Menu from './pages/Menu';
+import Confirm from './pages/Confirm';
+import Cart from './pages/Cart';
+import './styles/App.css';
 
 const App = () => (
   <Switch>

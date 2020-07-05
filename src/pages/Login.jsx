@@ -1,24 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Typography, Box, Button } from "@material-ui/core";
-import { Redirect, Link } from "react-router-dom";
-import Ambeer from "../context";
-import "../styles/index.css";
+import React, { useContext, useEffect, useState } from 'react';
+import { Typography, Box, Button } from '@material-ui/core';
+import { Redirect, Link } from 'react-router-dom';
+import Ambeer from '../context';
+import '../styles/index.css';
 
 const handleChangeInput = (name, event, input, setInput) => {
   setInput({ ...input, [name]: event });
 };
 
 const handleFormSubmit = (saveInput, input) => {
-  localStorage.setItem("user", JSON.stringify({ email: input.email }));
+  localStorage.setItem('user', JSON.stringify({ email: input.email }));
 
   saveInput(input);
 };
 
 const Login = () => {
   const { saveInput } = useContext(Ambeer);
-  const [input, setInput] = useState({ email: "", password: "" });
+  const [input, setInput] = useState({ email: '', password: '' });
   const [informations, setInformations] = useState(true);
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
     const validEmailRegEx = /^[A-Z0-9_'%=+!`#~$*?^{}&|-]+([.][A-Z0-9_'%=+!`#~$*?^{}&|-]+)*@[A-Z0-9-]+(\.[A-Z0-9-]+)+$/i;
