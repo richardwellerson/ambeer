@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FinishReservation = () => (
   <>
     <Box className="botoes-reserva">
-      <Link to="/cart">
+      <Link to="/reservation/confirm">
         <Button>Finalizar reserva</Button>
       </Link>
     </Box>

@@ -4,4 +4,23 @@
   align-items: center;
   height: 10vh;
   background-color: whitesmoke;
+  width: 100%;
+  max-width: none;
+  position: fixed;
+  bottom: 0;
+}
+
+.Footer_all .MuiAvatar-root {
+  width: 45px;
+  height: 45px;
+  transition-duration: 0.4s;
+}
+
+.Footer_all .MuiAvatar-root:hover {
+  background-color: #ffdf02;
+}
+
+.Footer_all img {
+  width: 70%;
+  height: 70%;
 }
