@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Box } from '@material-ui/core';
 
 import ReservationButton from '../components/Reservation/ReservationButton';
