@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# `Bem vindo a Ambeer!`
 
-## Available Scripts
+## Pitch
 
-In the project directory, you can run:
+Todas as vezes que eu vou em um bar, por mais bonito e aconchegante que seja, sempre tem o mesmo problema.
 
-### `npm start`
+`Fila.`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+E "vamo" combinar, nada mais chato que esperar na fila pra entrar, esperar na fila pra pagar, e as vezes, tem até fila pra sair.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Com o passar do tempo, eu fui percebendo que não era só eu que tinha esse sentimento, e também não era só por isso, tinha outras coisas, sabe?
 
-### `npm test`
+Como por exemplo:
+- Preço da Bebida,
+- Garçom demorando,
+- e também alguns outros incômodos que tem em qualquer lugar.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pensando nisso, criamos a `Ambeer`.
 
-### `npm run build`
+É uma iniciativa pensada e voltada completamente para a experiência do usuário, onde sabemos que é uma das partes mais importantes do bar.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `Quer evitar fila e ainda quer chegar no bar e já pegar sua cerveja?`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Só fazer sua reserva e selecionar qual cerveja quer quando chegar ao bar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `Tem alguém te incomodando ou precisa de ajuda com alguém que extrapolou?`
 
-### `npm run eject`
+Pressione o botão de ajuda no app. Rapidinho, um segurança do bar virá até você.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### `Quer dividir com todo mundo o preço da porção?`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Em breve disponibilizaremos uma funcionalidade da qual a pessoa pode selecionar a quantidade de pessoas para dividir determinado pedido.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+E uma funcionalidade incrível: Cada comanda é `INDIVIDUAL`, então, nada de aproveitadores. Cada um no seu quadrado ;)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Vem pra Ambeer!
 
-## Learn More
+## Como usar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Requisitos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+É necessário ter em sua máquina:
 
-### Code Splitting
+- Git
+- NodeJS
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Passo a passo
 
-### Analyzing the Bundle Size
+#### `WebApp`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Clone o Repositório
+- Abra o terminal dentro da pasta
+- Execute o comando `npm install`
+- Depois, execute `npm start`.
+- Abrirá em seu navegador. 
 
-### Making a Progressive Web App
+`Mobile`:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Repita os passos acima
+- Volte ao terminal do qual executou o projeto
+- Veja o IP do terminal e insira no browser do seu celular.
+- A aplicação abrirá normalmente.
 
-### Advanced Configuration
+**OU**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+No seu computador, após abrir a aplicação no navegador:
 
-### Deployment
+- Abra o console
+- Selecione a opção "Visualizar responsivamente"
+- Escolha o aparelho do qual deseja visualizar.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Caso queira colaborar com o projeto, não deixe de abrir o seu Pull Request.
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+`OpenSource is the future!`

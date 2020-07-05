@@ -45,7 +45,7 @@ describe('Testing Register file', () => {
   });
 
   test('testing user registration', async () => {
-    const { getByTestId, history } = renderWithRouter(
+    const { getByTestId } = renderWithRouter(
       <Ambeer.Provider value={ mock }>
         <Register />
       </Ambeer.Provider>
@@ -86,8 +86,7 @@ describe('Testing Register file', () => {
 
       fireEvent.click(reservation);
 
-      expect(global.alert).not.toBeNull();
-      // expect(history.location.pathname).toEqual('/register');
+      expect(alert).not.toBeNull();
     });
   });
 });

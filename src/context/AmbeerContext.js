@@ -6,7 +6,7 @@ import { allBeers, foods } from '../services/data';
 const allProducts = [...allBeers, ...foods];
 
 const setDataToSearch = (filter) => {
-  if (filter === 'Todos') {
+  if (filter === "Todos") {
     return allProducts;
   }
   if (filter === 'Cervejas') {
@@ -26,9 +26,8 @@ const AmbeerContext = ({ children }) => {
   const [userSearch, setUserSearch] = useState('');
   const [searchedProducts, setSearchedProducts] = useState(allProducts);
   const [preOrder, setPreOrder] = useState([]);
-  const [selectDate, setSelectDate] = useState('');
+  const [selectDate, setSelectDate] = useState(new Date());
   const [register, setRegister] = useState({});
-  // const [selectDate, setSelectDate] = useState(new Date());
 
   useEffect(() => {
     const afterFilter = setDataToSearch(filter);
@@ -70,6 +69,7 @@ const AmbeerContext = ({ children }) => {
     userSearch,
     setUserSearch,
     searchedProducts,
+    setSearchedProducts,
     saveInput,
     informationsUser,
     saveRegisterUser,
@@ -80,6 +80,7 @@ const AmbeerContext = ({ children }) => {
     selectDate,
     register,
     setRegister,
+    allProducts,
   };
 
   return <Ambeer.Provider value={toProvider}>{children}</Ambeer.Provider>;

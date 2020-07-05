@@ -1,9 +1,9 @@
-import React from 'react';
-import { Typography, Box } from '@material-ui/core';
+import React from "react";
+import { Typography, Box } from "@material-ui/core";
 
 const TitleMenu = () => (
-  <Box>
-    <Typography>Cardápio</Typography>
+  <Box className="titulo-cardapio">
+    <Typography variant="h4">Cardápio</Typography>
   </Box>
 );
 
