@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
-import Ambeer from '../context';
+import React from 'react';
+import { Box } from '@material-ui/core';
+import Footer from '../components/Footer/Footer';
+import ConfirmTitle from '../components/Confirm/ConfirmTitle';
+import TransparencyLogo from '../components/Confirm/TransparencyLogo';
 
-const Confirm = () => {
-  const { login } = useContext(Ambeer);
-  const actualRoute = window.location.href;
-  return (
-    <div>
-      <p>{login}</p>
-      <p>{actualRoute}</p>
-    </div>
-  );
-};
+const Confirm = () => (
+  <Box>
+    <ConfirmTitle />
+    <TransparencyLogo />
+    <Footer />
+  </Box>
+);
 
 export default Confirm;
