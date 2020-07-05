@@ -1,8 +1,8 @@
 import React from 'react';
 import { cleanup, act, waitForElement, fireEvent } from '@testing-library/react';
 import renderWithRouter from './mocks/RenderService';
-import App from '../App';
 import Ambeer from '../context';
+import Home2 from '../pages/Home2';
 import Login from '../pages/Login';
 
 const saveInput = jest.fn();
@@ -11,7 +11,7 @@ describe('Test home screen component', () => {
   afterEach(() => cleanup());
 
   test('testing component rendering', async () => {
-    const { getByTestId } = renderWithRouter(<App />);
+    const { getByTestId } = renderWithRouter(<Home2 />);
     const [
       logo,
       entrar,
@@ -32,7 +32,7 @@ describe('Test home screen component', () => {
   test('testing redirect route', async () => {
     const { getByTestId, history } = renderWithRouter(
       <Ambeer.Provider value={saveInput}>
-        <App />
+        <Home2 />
         <Login />
       </Ambeer.Provider>
     );

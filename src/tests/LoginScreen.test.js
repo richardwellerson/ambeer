@@ -5,15 +5,21 @@ import 'jest-mock';
 import Login from '../pages/Login';
 import Ambeer from '../context';
 import Profile from '../pages/Profile';
+import LocalStorage from './mocks/LocalStorageMock';
 
 const  saveInput = jest.fn();
 const  userData = jest.fn();
 const mocks = { saveInput, userData };
 
+window.localStorage = new LocalStorage();
+
 describe('Testing login screen', () => {
-  afterEach(cleanup);
+  afterEach(() => cleanup());
+  beforeEach(() => localStorage.clear());
 
   test('renders a reading with the text Login', () => {
+    localStorage.setItem('user', JSON.stringify({ email: 'test@gmail.com', name: 'test' }));
+
     const { getByText } = renderWithRouter(
       <Ambeer.Provider value={ saveInput }>
         <Login />
@@ -27,6 +33,8 @@ describe('Testing login screen', () => {
   });
 
   test('should check dataTestId', () => {
+    localStorage.setItem('user', JSON.stringify({ email: 'test@gmail.com', name: 'test' }));
+
     const { getByTestId } = renderWithRouter(
       <Ambeer.Provider value={ saveInput }>
         <Login />
@@ -45,6 +53,8 @@ describe('Testing login screen', () => {
   });
 
   test('should check event', async () => {
+    localStorage.setItem('user', JSON.stringify({ email: 'test@gmail.com', name: 'test' }));
+
     const { getByTestId, history } = renderWithRouter(
       <Ambeer.Provider value={ mocks }>
         <Login />
@@ -77,27 +87,4 @@ describe('Testing login screen', () => {
       expect(history.location.pathname).toEqual('/profile');
     });
   });
-
-  // test('testing false results', () => {
-  //   const { getByTestId, getByRole } = renderWithRouter(
-  //     <Ambeer.Provider value={ saveInput }>
-  //     <Login />
-  //   </Ambeer.Provider>
-  //   );
-
-  //   act(() => {
-  //     const email = 'testgmail.com';
-  //     const password = '12345';
-  //     const inputEmail = getByTestId('email-input');
-  //     const inputPassword = getByTestId('password-input');
-
-  //     fireEvent.input(inputEmail, {
-  //       target: { value: email },
-  //     });
-  //     fireEvent.input(inputPassword, {
-  //       taget: { value: password },
-  //     });
-  //     expect(getByRole('input', { disabled: true }));
-  //   });
-  // });
 });
