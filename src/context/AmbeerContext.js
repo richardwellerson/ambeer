@@ -9,33 +9,37 @@ const setDataToSearch = (filter) => {
   if (filter === 'Todos') {
     return allProducts;
   }
-  if (filter === 'Cervejas') {
+  if (filter === "Cervejas") {
     return [...allBeers];
   }
   return [...foods];
 };
 
-const user = { email: '', password: '' };
-const date = { name: '', nickName: '', email: '', password: '' };
+const user = { email: "", password: "" };
+const date = { name: "", nickName: "", email: "", password: "" };
 
 const AmbeerContext = ({ children }) => {
-  const [login, setLogin] = useState('Context Ativo');
-  const [filter, setFilter] = useState('Todos');
+  const [login, setLogin] = useState("Context Ativo");
+  const [filter, setFilter] = useState("Todos");
   const [informationsUser, setInformationsUser] = useState(user);
   const [userDate, setUserDate] = useState(date);
-  const [userSearch, setUserSearch] = useState('');
+  const [userSearch, setUserSearch] = useState("");
   const [searchedProducts, setSearchedProducts] = useState(allProducts);
   const [preOrder, setPreOrder] = useState([]);
   const [selectDate, setSelectDate] = useState('');
   const [register, setRegister] = useState({});
+  // const [selectDate, setSelectDate] = useState(new Date());
 
   useEffect(() => {
     const afterFilter = setDataToSearch(filter);
-    const afterInput = userSearch !== ''
-      ? afterFilter.filter((single) => single.product.toLowerCase().includes(userSearch.toLowerCase()))
-      : afterFilter;
+    const afterInput =
+      userSearch !== ""
+        ? afterFilter.filter((single) =>
+            single.product.toLowerCase().includes(userSearch.toLowerCase())
+          )
+        : afterFilter;
     setSearchedProducts(afterInput);
-  }, [filter, userSearch])
+  }, [filter, userSearch]);
 
   const saveInput = (input) => {
     const { email, password } = input;
@@ -78,11 +82,7 @@ const AmbeerContext = ({ children }) => {
     setRegister,
   };
 
-  return (
-    <Ambeer.Provider value={toProvider}>
-      {children}
-    </Ambeer.Provider>
-  )
+  return <Ambeer.Provider value={toProvider}>{children}</Ambeer.Provider>;
 };
 
 export default AmbeerContext;

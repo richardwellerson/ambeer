@@ -22,7 +22,7 @@ export const user = [
     email: 'henrique@gmail.com',
     password: 'password',
     image: 'https://icon-library.com/images/icon-man-png/icon-man-png-2.jpg',
-  }
+  },
 ];
 
 export const allBeers = [
@@ -238,5 +238,27 @@ export const foods = [
     product: 'Kedgeree',
     image: 'https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg',
     price: 40,
+  },
+];
+
+export const bars = [
+  {
+    name: 'Devoto`s Bar',
+    address: 'Rua Ministro Orozimbo Nonato, 102 - loja 02',
+    imageURL: 'https://ralifesharer.com.br/wp-content/uploads/2015/04/Logo.jpg',
+    phone: '(31) 99821-7056',
+  },
+  {
+    name: 'Subastor',
+    address: 'Rua Delfina, 163 - Vila Madalena, São Paulo - SP',
+    imageURL: 'https://www.baressp.com.br/bares/fotos2/sala-min_211120191118.jpg',
+    phone: '(11) 3815-1364',
+  },
+  {
+    name: 'Sul da Ilha Surf Bar',
+    address: 'Av. Antônio Borges dos Santos, 792 - Armacao do Pântano do Sul, Florianópolis - SC',
+    imageURL:
+      'https://lh3.googleusercontent.com/aecTEqr5sEPybQZySFZApMgkcXEJK_HcC6mE-M-Ym_eaFY3PdelwpyXaamT-Q2f_TgAFNBNN=w1080-h608-p-no-v0',
+    phone: '(48) 3207-0438',
   },
 ];

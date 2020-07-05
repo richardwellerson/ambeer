@@ -293,3 +293,97 @@ body {
   border: none;
 }
 /*Final Cadastro*/
+
+.reserva {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px auto auto auto;
+  min-height: 600px;
+  justify-content: space-around;
+}
+
+.reserva .titulo-reserva {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reserva .titulo-reserva h4 {
+  color: #ffffff;
+  font-family: "Comfortaa", cursive;
+}
+
+.reserva .titulo-reserva h6 {
+  color: #ffffff;
+  font-family: "Comfortaa", cursive;
+}
+
+.container-botoes-reserva {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 160px;
+  justify-content: space-between;
+}
+
+.botoes-reserva button {
+  font-family: "Comfortaa", cursive;
+  text-transform: none !important;
+  color: #ffffff;
+  border-color: #ffffff;
+  transition-duration: 0.4s;
+  width: 140px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  width: 315px;
+}
+
+.botoes-reserva button:hover {
+  border-color: #ffdf02;
+  background-color: #ffdf02;
+}
+
+.botoes-reserva a {
+  text-decoration: none;
+}
+
+.botao-voltar-reserva button {
+  font-family: "Comfortaa", cursive;
+  border: none;
+  text-transform: none !important;
+  color: #ffffff;
+}
+
+.botao-voltar-reserva a {
+  text-decoration: none;
+}
+
+.reserva .calendario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.calendario .MuiInputBase-root {
+  color: #ffdf02;
+}
+
+.calendario label {
+  color: rgb(230, 228, 219);
+}
+
+.calendario .MuiIconButton-root {
+  color: rgb(230, 228, 219);
+}
+
+.calendario .MuiInput-underline:before {
+  color: rgb(230, 228, 219);
+}
