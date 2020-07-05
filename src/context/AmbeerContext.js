@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { allBeers, foods } from '../services/data';
 import PropTypes from 'prop-types';
 import Ambeer from './index';
-import { allBeers, foods } from '../services/data';
 
 const allProducts = [...allBeers, ...foods];
 
 const setDataToSearch = (filter) => {
   if (filter === 'Todos') {
-    return [...allBeers, ...foods];
+    return allProducts;
   }
   if (filter === 'Cervejas') {
     return [...allBeers];
@@ -36,22 +36,23 @@ const AmbeerContext = ({ children }) => {
   }, [filter, userSearch])
 
   const saveInput = (input) => {
+    const { email, password } = input;
     const inputsLogin = {
-      email: input.email,
-      password: input.password,
+      email,
+      password,
     };
     setInformationsUser(inputsLogin);
     setUserDate(inputsLogin);
   };
 
   const saveRegisterUser = (dados) => {
+    const { name, nickName, email, password } = dados;
     const inputsRegister = {
-      name: dados.name,
-      nickName: dados.nickName,
-      email: dados.email,
-      password: dados.password,
+      name,
+      nickName,
+      email,
+      password,
     };
-    console.log(userDate);
     setUserDate(inputsRegister);
   };
 
