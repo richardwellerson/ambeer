@@ -395,7 +395,7 @@ body {
 /*Cardápio*/
 .cardapio {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -435,6 +435,10 @@ body {
   font-family: "Comfortaa", cursive;
 }
 
+.filtro-cardapio button span:hover {
+  color: #ffffff;
+}
+
 .produtos {
   width: 100%;
 }
@@ -444,12 +448,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .produtos-lista img {
   border: 2px solid white;
   border-radius: 50%;
-  width: 150px;
+  width: 100px;
   margin: 10px 10px;
 }
 
@@ -502,13 +507,27 @@ body {
   width: 315px;
 }
 
-.botoes-reserva {
+.botoes-reserva-habilitados {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
-.botoes-reserva button {
+.botoes-reserva-habilitados p {
+  color: white;
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 40px 0;
+}
+
+.botoes-reserva-desabilitados {
+  display: none;
+}
+
+.botoes-reserva-habilitados button {
   font-family: "Comfortaa", cursive;
   text-transform: none !important;
   color: #ffffff;
@@ -518,7 +537,7 @@ body {
   height: 50px;
   border: 2px solid #ffffff;
   width: 190px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .produtos-lista div {
@@ -532,6 +551,22 @@ body {
 .produtos-lista div p {
   font-family: "Comfortaa", cursive;
   color: #ffffff;
+  text-align: center;
+  font-size: 12px;
 }
 
+.produtos .produtos-lista .botao-add-produto {
+  font-family: "Comfortaa", cursive;
+  text-transform: none !important;
+  color: #ffdd02;
+  transition-duration: 0.4s;
+  width: 140px;
+  height: 40px;
+  border: 2px solid #ffdd02;
+  margin-top: 10px;
+}
+
+.produtos .produtos-lista .botao-add-produto:hover {
+  color: #ffffff;
+}
 /*Final Cardápio*/

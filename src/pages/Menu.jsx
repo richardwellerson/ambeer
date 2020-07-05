@@ -5,18 +5,19 @@ import ShowProducts from "../components/Menu/ShowProducts";
 import InputSearch from "../components/Menu/InputSearch";
 import MenuTitle from "../components/Menu/MenuTitle";
 import Footer from "../components/Footer/Footer";
-import FinishPreOrder from "../components/Menu/FinishPreOrder";
 
 const Menu = () => (
-  <Box className="cardapio">
-    <Box className="container-cardapio">
-      <MenuTitle />
-      <InputSearch />
-      <FilterProducts />
+  <>
+    <Box className="cardapio">
+      <Box className="container-cardapio">
+        <MenuTitle />
+        <InputSearch />
+        <FilterProducts />
+      </Box>
+      <ShowProducts />
     </Box>
-    <ShowProducts />
     <Footer />
-  </Box>
+  </>
 );
 
 export default Menu;
