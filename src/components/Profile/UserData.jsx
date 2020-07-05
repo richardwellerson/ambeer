@@ -1,15 +1,19 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Box, Typography } from '@material-ui/core';
-import Ambeer from '../../context';
+import user from '../../img/neutralUser.svg'
 
 const UserData = () => {
-  const { userDate } = useContext(Ambeer);
-  console.log(userDate);
+  const { name, email } = JSON.parse(localStorage.getItem('userData'));
+  console.log(name, email);
   return (
     <Box>
-      <img src="" alt="foto de perfil" />
-      {/* <Typography variant="h3">{name}</Typography>
-      <Typography variant="h5">{email}</Typography> */}
+      <img
+        width="50px"
+        src={user}
+        alt="foto de perfil"
+      />
+      <Typography variant="h3">{name}</Typography>
+      <Typography variant="h5">{email}</Typography>
     </Box>
   );
 };
