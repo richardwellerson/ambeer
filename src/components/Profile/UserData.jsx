@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography } from '@material-ui/core';
 import Ambeer from '../../context';
 
