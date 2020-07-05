@@ -6,7 +6,6 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogTitle,
   DialogContentText,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
@@ -95,7 +94,7 @@ const ShowProducts = () => {
           </Button>
         </Box>
         <Box>
-          <Link to="/reservation/cart">
+          <Link to="/reservation/confirm">
             <Button>Finalizar Reserva</Button>
           </Link>
         </Box>

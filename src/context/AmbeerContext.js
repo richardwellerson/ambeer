@@ -26,7 +26,7 @@ const AmbeerContext = ({ children }) => {
   const [userSearch, setUserSearch] = useState("");
   const [searchedProducts, setSearchedProducts] = useState(allProducts);
   const [preOrder, setPreOrder] = useState([]);
-  const [selectDate, setSelectDate] = useState("");
+  const [selectDate, setSelectDate] = useState(new Date());
   const [register, setRegister] = useState({});
 
   useEffect(() => {

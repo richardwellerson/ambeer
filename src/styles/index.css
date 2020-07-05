@@ -570,3 +570,24 @@ body {
   color: #ffffff;
 }
 /*Final Cardápio*/
+
+/*Finalizar Reserva*/
+.finalizar-reserva {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px auto auto auto;
+  min-height: 600px;
+}
+
+.textos-reserva-finalizada h4 {
+  font-family: "Comfortaa", cursive;
+  color: #ffffff;
+}
+
+.textos-reserva-finalizada h6 {
+  font-family: "Comfortaa", cursive;
+  color: #ffffff;
+}
