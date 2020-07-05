@@ -1,7 +1,7 @@
 import React from 'react';
 import UserData from '../components/Profile/UserData';
 import ReservationButton from '../components/Profile/ReservationButton';
-import GoogleAPIComponent from '../components/Profile/GoogleAPIComponent';
+import ShowBars from '../components/Profile/ShowBars';
 import Footer from '../components/Footer/Footer';
 import { Box } from '@material-ui/core';
 
@@ -10,7 +10,7 @@ const Profile = () => {
     <Box>
       <UserData />
       <ReservationButton />
-      <GoogleAPIComponent />
+      <ShowBars />
       <Footer />
     </Box>
   );
