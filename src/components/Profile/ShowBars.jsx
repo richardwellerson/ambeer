@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Box } from '@material-ui/core';
 import { bars } from '../../services/data';
 
-const ComponentBares = () => {
+const ShowBars = () => {
   return (
     <Box>
       {bars.map((bar) => (
@@ -16,4 +16,4 @@ const ComponentBares = () => {
   );
 };
 
-export default ComponentBares;
+export default ShowBars;
