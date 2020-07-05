@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Typography, Box, Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Ambeer from "../context";
 
 const handleChangeInput = (name, event, input, setInput) => {
@@ -81,24 +81,27 @@ const createForm = (input, setInput, eye, setEye) => {
   );
 };
 
-const formSubmit = (saveRegisterUser, input) => {
+const formSubmit = (saveRegisterUser, input, history, setRegister) => {
   const { password, passwordConfirm } = input;
   if (password === passwordConfirm) {
     alert("Usuário cadastrado com sucesso! Faça login para continuar.");
-    return saveRegisterUser(input);
+    setRegister(input);
+    saveRegisterUser(input);
+    return history.push('/login');
   }
-  return alert("Senhas diferentes!");
+  return alert("As senhas não coincidem.");
 };
 
 const Register = () => {
-  const { saveRegisterUser } = useContext(Ambeer);
+  const { saveRegisterUser, setRegister } = useContext(Ambeer);
+  const history = useHistory();
   const [input, setInput] = useState({
-    name: "",
-    nickName: "",
-    email: "",
-    password: "",
-    passwordConfirm: "",
-  });
+      name: "",
+      nickName: "",
+      email: "",
+      password: "",
+      passwordConfirm: "",
+    });
   const [registerOk, setRegisterOk] = useState(true);
   const [eye, setEye] = useState(true);
 
@@ -123,7 +126,7 @@ const Register = () => {
             className={registerOk && ".MuiButton-root.Mui-disabled"}
             disabled={registerOk}
             type="button"
-            onClick={() => formSubmit(saveRegisterUser, input)}
+            onClick={() => formSubmit(saveRegisterUser, input, history, setRegister)}
           >
             Finalizar Cadastro
           </Button>
