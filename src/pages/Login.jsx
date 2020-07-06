@@ -1,47 +1,47 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Typography, Box, Button } from '@material-ui/core';
-import { useHistory } from 'react-router-dom';
-import Ambeer from '../context';
-import '../styles/index.css';
+import React, { useContext, useEffect, useState } from "react";
+import { Typography, Box, Button } from "@material-ui/core";
+import { useHistory, Link } from "react-router-dom";
+import Ambeer from "../context";
+import "../styles/index.css";
 
 const handleChangeInput = (name, event, input, setInput) => {
   setInput({ ...input, [name]: event });
 };
 
 const handleFormSubmit = (saveInput, input, history, register) => {
-  const { email, password } = register
+  const { email, password } = register;
   if (input.email !== email) {
-    alert('Cadastro não localizado.');
+    alert("Cadastro não localizado.");
     return;
   }
   if (input.password !== password) {
-    alert('Senha incorreta.')
+    alert("Senha incorreta.");
     return;
   }
-  localStorage.setItem('user', JSON.stringify(register));
+  localStorage.setItem("user", JSON.stringify(register));
   saveInput(input);
-  return history.push('/profile');
+  return history.push("/profile");
 };
 
 const Login = () => {
   const { saveInput, register } = useContext(Ambeer);
-  const [input, setInput] = useState({ email: '', password: '' });
+  const [input, setInput] = useState({ email: "", password: "" });
   const [informations, setInformations] = useState(true);
   const history = useHistory();
 
   useEffect(() => {
     const validEmailRegEx = /^[A-Z0-9_'%=+!`#~$*?^{}&|-]+([.][A-Z0-9_'%=+!`#~$*?^{}&|-]+)*@[A-Z0-9-]+(\.[A-Z0-9-]+)+$/i;
 
-    if (!validEmailRegEx.test(input.email)
-      || (input.password.length <= 5)) return setInformations(true);
+    if (!validEmailRegEx.test(input.email) || input.password.length <= 5)
+      return setInformations(true);
 
     return setInformations(false);
   }, [input]);
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    if(user) return history.push('/profile');
-  })
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) return history.push("/profile");
+  });
 
   return (
     <>
@@ -55,7 +55,9 @@ const Login = () => {
             <input
               data-testid="email-input"
               type="email"
-              onChange={(ele) => handleChangeInput('email', ele.target.value, input, setInput)}
+              onChange={(ele) =>
+                handleChangeInput("email", ele.target.value, input, setInput)
+              }
             />
           </Box>
           <Box className="input">
@@ -63,7 +65,9 @@ const Login = () => {
             <input
               data-testid="password-input"
               type="password"
-              onChange={(ele) => handleChangeInput('password', ele.target.value, input, setInput)}
+              onChange={(ele) =>
+                handleChangeInput("password", ele.target.value, input, setInput)
+              }
             />
           </Box>
           <Box className="botao-login">
@@ -72,10 +76,17 @@ const Login = () => {
               data-testid="login-submit-btn"
               variant="outlined"
               size="large"
-              onClick={() => handleFormSubmit(saveInput, input, history, register)}
+              onClick={() =>
+                handleFormSubmit(saveInput, input, history, register)
+              }
             >
               Entrar
             </Button>
+            <Box className="botao-voltar-login">
+              <Link to="/home">
+                <Button>Voltar</Button>
+              </Link>
+            </Box>
           </Box>
         </Box>
       </Box>
