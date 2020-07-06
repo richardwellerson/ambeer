@@ -2,9 +2,10 @@
 
 ## Pitch
 
-Todas as vezes que eu vou em um bar, por mais bonito e aconchegante que seja, sempre tem o mesmo problema.
+Todas as vezes que eu vou em um bar, por mais bonito e aconchegante que seja, sempre tem os mesmos problemas:
 
-`Fila.`
+`Fila,`
+`Cerveja cara.`
 
 E "vamo" combinar, nada mais chato que esperar na fila pra entrar, esperar na fila pra pagar, e as vezes, tem até fila pra sair.
 
@@ -23,9 +24,13 @@ Pensando nisso, criamos a `Ambeer`.
 
 Só fazer sua reserva e selecionar qual cerveja quer quando chegar ao bar.
 
+#### `Quer economizar no preço do consumo?`
+
+Disponibilizamos 10% de desconto no preço total caso você efetue uma reserva.
+
 #### `Tem alguém te incomodando ou precisa de ajuda com alguém que extrapolou?`
 
-Pressione o botão de ajuda no app. Rapidinho, um segurança do bar virá até você.
+Em breve disponibilizaremos um botão de ajuda no app. Rapidinho, um segurança do bar virá até você.
 
 #### `Quer dividir com todo mundo o preço da porção?`
 
