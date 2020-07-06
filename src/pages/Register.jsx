@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Typography, Box, Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
-import Ambeer from "../context";
+import React, { useContext, useState, useEffect } from 'react';
+import { Typography, Box, Button } from '@material-ui/core';
+import { Link, useHistory} from 'react-router-dom';
+import Ambeer from '../context';
 
 const handleChangeInput = (name, event, input, setInput) => {
   setInput({ ...input, [name]: event });
@@ -14,7 +14,7 @@ const createForm = (input, setInput, eye, setEye) => {
         <label htmlFor="email">Nome</label>
         <input
           type="text"
-          data-testid=""
+          data-testid="input-name"
           onChange={(e) =>
             handleChangeInput("name", e.target.value, input, setInput)
           }
@@ -24,7 +24,7 @@ const createForm = (input, setInput, eye, setEye) => {
         <label htmlFor="email">Apelido</label>
         <input
           type="text"
-          data-testid=""
+          data-testid="input-nickName"
           onChange={(e) =>
             handleChangeInput("nickName", e.target.value, input, setInput)
           }
@@ -34,7 +34,7 @@ const createForm = (input, setInput, eye, setEye) => {
         <label htmlFor="email">Email</label>
         <input
           type="email"
-          data-testid=""
+          data-testid="input-email"
           onChange={(e) =>
             handleChangeInput("email", e.target.value, input, setInput)
           }
@@ -44,7 +44,7 @@ const createForm = (input, setInput, eye, setEye) => {
         <label htmlFor="email">Senha</label>
         <input
           type={eye ? "password" : "text"}
-          data-testid=""
+          data-testid="input-password"
           onChange={(e) =>
             handleChangeInput("password", e.target.value, input, setInput)
           }
@@ -61,7 +61,7 @@ const createForm = (input, setInput, eye, setEye) => {
         </label>
         <input
           type={eye ? "password" : "text"}
-          data-testid=""
+          data-testid="input-passwordConfirm"
           onChange={(e) =>
             handleChangeInput(
               "passwordConfirm",
@@ -96,11 +96,11 @@ const Register = () => {
   const { saveRegisterUser, setRegister } = useContext(Ambeer);
   const history = useHistory();
   const [input, setInput] = useState({
-    name: "",
-    nickName: "",
-    email: "",
-    password: "",
-    passwordConfirm: "",
+    name: '',
+    nickName: '',
+    email: '',
+    password: '',
+    passwordConfirm: '',
   });
   const [registerOk, setRegisterOk] = useState(true);
   const [eye, setEye] = useState(true);
@@ -123,6 +123,7 @@ const Register = () => {
         <Box>{createForm(input, setInput, eye, setEye)}</Box>
         <Box className="botao-cadastro">
           <Button
+            data-testid="finhish-reservation"
             className={registerOk && ".MuiButton-root.Mui-disabled"}
             disabled={registerOk}
             type="button"

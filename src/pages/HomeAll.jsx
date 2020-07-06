@@ -1,9 +1,9 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import "../styles/index.css";
-import Home from "./Home";
-import Home2 from "./Home2";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import '../styles/index.css';
+import Home from './Home';
+import Home2 from './Home2';
 
 const responsive = {
   superLargeDesktop: {

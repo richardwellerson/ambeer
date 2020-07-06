@@ -45,7 +45,7 @@ const ShowProducts = () => {
   const totalPrice =
     preOrder.length > 0
       ? preOrder.reduce((total, act) => {
-          return act.price + total;
+        return act.price + total;
         }, 0)
       : 0;
   const isShowPrice = history.location.pathname.includes("reservation");

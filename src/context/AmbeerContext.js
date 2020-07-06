@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { allBeers, foods } from "../services/data";
-import PropTypes from "prop-types";
-import Ambeer from "./index";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Ambeer from './index';
+import { allBeers, foods } from '../services/data';
 
 const allProducts = [...allBeers, ...foods];
 
@@ -9,21 +9,21 @@ const setDataToSearch = (filter) => {
   if (filter === "Todos") {
     return allProducts;
   }
-  if (filter === "Cervejas") {
+  if (filter === 'Cervejas') {
     return [...allBeers];
   }
   return [...foods];
 };
 
-const user = { email: "", password: "" };
-const date = { name: "", nickName: "", email: "", password: "" };
+const user = { email: '', password: ''};
+const date = { name: '', nickName: '', email: '', password: ''};
 
 const AmbeerContext = ({ children }) => {
-  const [login, setLogin] = useState("Context Ativo");
-  const [filter, setFilter] = useState("Todos");
+  const [login, setLogin] = useState('Context Ativo');
+  const [filter, setFilter] = useState('Todos');
   const [informationsUser, setInformationsUser] = useState(user);
   const [userDate, setUserDate] = useState(date);
-  const [userSearch, setUserSearch] = useState("");
+  const [userSearch, setUserSearch] = useState('');
   const [searchedProducts, setSearchedProducts] = useState(allProducts);
   const [preOrder, setPreOrder] = useState([]);
   const [selectDate, setSelectDate] = useState(new Date());
@@ -32,7 +32,7 @@ const AmbeerContext = ({ children }) => {
   useEffect(() => {
     const afterFilter = setDataToSearch(filter);
     const afterInput =
-      userSearch !== ""
+      userSearch !== ''
         ? afterFilter.filter((single) =>
             single.product.toLowerCase().includes(userSearch.toLowerCase())
           )
