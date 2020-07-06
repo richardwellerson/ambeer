@@ -12,6 +12,7 @@ const UserData = () => {
         </Box>
         <Typography variant="h4">{name}</Typography>
         <Typography variant="subtitle2">{email}</Typography>
+        <Typography variant="subtitle1">Selecione um bar:</Typography>
       </Box>
     </>
   );

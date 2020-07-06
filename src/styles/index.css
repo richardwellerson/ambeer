@@ -689,6 +689,7 @@ body {
   margin-bottom: 50px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .container-bares h6 {
@@ -703,4 +704,9 @@ body {
 
 .img-user img {
   width: 120px;
+}
+
+.perfil-user :nth-last-child(-n + 1) {
+  margin-top: 10px;
+  color: #ffdd02;
 }
