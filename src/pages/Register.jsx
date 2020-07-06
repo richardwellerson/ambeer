@@ -87,7 +87,7 @@ const formSubmit = (saveRegisterUser, input, history, setRegister) => {
     alert("Usuário cadastrado com sucesso! Faça login para continuar.");
     setRegister(input);
     saveRegisterUser(input);
-    return history.push('/login');
+    return history.push("/login");
   }
   return alert("As senhas não coincidem.");
 };
@@ -127,7 +127,9 @@ const Register = () => {
             className={registerOk && ".MuiButton-root.Mui-disabled"}
             disabled={registerOk}
             type="button"
-            onClick={() => formSubmit(saveRegisterUser, input, history, setRegister)}
+            onClick={() =>
+              formSubmit(saveRegisterUser, input, history, setRegister)
+            }
           >
             Finalizar Cadastro
           </Button>
